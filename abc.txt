@@ -1,2 +1,1 @@
-not the file has been cleaned
-
+This should be the content after running bgb
