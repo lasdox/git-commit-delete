@@ -82,7 +82,7 @@ smtp:
   fromAddress: noreply@harness.io
   useSSL: true
   username: apikey
-  password: ***REMOVED***
+  password: "smtp_password_placeholder"
 
 seedDataConfiguration:
   shouldOverrideAllPredefinedTemplates: true
