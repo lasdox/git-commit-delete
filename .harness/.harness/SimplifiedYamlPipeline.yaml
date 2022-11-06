@@ -1,60 +1,23 @@
-pipeline:
-  name: SimplifiedYamlPipeline
-  identifier: SimplifiedYamlPipeline
-  projectIdentifier: My_Project
-  orgIdentifier: default
-  tags: {}
-  stages:
-    - stage:
-        strategy:
-          repeat:
-            times: 3
-        name: custom
-        identifier: custom
-        description: ""
-        type: Custom
-        spec:
-          execution:
-            steps:
-              - step:
-                  type: ShellScript
-                  name: ss1
-                  identifier: ss1
-                  spec:
-                    shell: Bash
-                    onDelegate: true
-                    source:
-                      type: Inline
-                      spec:
-                        script: echo Hi
-                    environmentVariables: []
-                    outputVariables: []
-                  timeout: 10m
-              - step:
-                  type: ShellScript
-                  name: ss
-                  identifier: ss
-                  spec:
-                    shell: Bash
-                    onDelegate: true
-                    source:
-                      type: Inline
-                      spec:
-                        script: <+input>.executionInput()
-                    environmentVariables: []
-                    outputVariables: []
-                  timeout: 10m
-                  failureStrategies: []
-                  when:
-                    stageStatus: All
-        tags: {}
-        variables:
-          - name: timeout
-            type: String
-            description: ""
-            value: 20s
-  variables:
-    - name: Var1
-      type: String
-      value: <+matrix.defg>
-  timeout: 20s
+version: 1
+name: SimplifiedYamlPipeline
+stages:
+  - type: Custom
+    strategy:
+    spec:
+      steps:
+        - type: Http
+          strategy:
+            matrix:
+              a: ["a","b", "c"]
+              maxConcurrency: 3
+          spec:
+            method: GET
+            url: http://www.google.com
+        - type: Http
+          strategy:
+            matrix:
+              a: ["a","b", "c"]
+              maxConcurrency: 3
+          spec:
+            method: GET
+            url: http://www.google.com
