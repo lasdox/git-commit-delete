@@ -1,0 +1,15 @@
+version: 1
+name: simplifiedPipelineYaml
+stages:
+  - type: Custom
+    strategy:
+      matrix:
+        a: ["a","b", "c"]
+        maxConcurrency: 3
+    name: custom_stage_name
+    spec:
+      steps:
+        - type: Http
+          spec:
+            method: GET
+            url: http://www.google.com
