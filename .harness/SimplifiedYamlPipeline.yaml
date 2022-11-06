@@ -3,6 +3,10 @@ name: SimplifiedYamlPipeline
 stages:
   - type: Custom
     strategy:
+      matrix:
+        a: ["a","b","c"]
+        b: ["a","b","c"]
+        maxConcurrency: 4
     spec:
       steps:
         - type: Http
