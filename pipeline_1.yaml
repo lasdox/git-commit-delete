@@ -6,17 +6,12 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: cs1
-        identifier: cs1
+        name: pip-stage
+        identifier: pipstage
         description: ""
-        type: Custom
+        type: Pipeline
         spec:
-          execution:
-            steps:
-              - step:
-                  type: Wait
-                  name: Wait_1
-                  identifier: Wait_1
-                  spec:
-                    duration: 10m
-        tags: {}
+          org: default
+          pipeline: remotechild
+          project: Brijesh
+          inputs: {}
