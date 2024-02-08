@@ -14,4 +14,5 @@ pipeline:
           org: default
           pipeline: remotechild
           project: Brijesh
-          inputs: {}
+          inputSetReferences:
+            - input_set_1
