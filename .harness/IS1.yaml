@@ -1,0 +1,19 @@
+inputSet:
+  name: IS-1
+  identifier: IS1
+  orgIdentifier: default
+  projectIdentifier: Brijesh
+  pipeline:
+    identifier: remote_1
+    stages:
+      - stage:
+          identifier: cs2
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: Wait_1
+                    type: Wait
+                    spec:
+                      duration: 10s
