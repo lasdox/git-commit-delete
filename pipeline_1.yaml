@@ -14,8 +14,6 @@ pipeline:
           org: default
           pipeline: remotechild
           project: Brijesh
-          inputSetReferences:
-            - input_set_1
     - stage:
         name: cs2
         identifier: cs2
