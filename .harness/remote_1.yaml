@@ -14,17 +14,5 @@ pipeline:
           org: default
           pipeline: remote_child
           project: Brijesh
-          inputs:
-            identifier: remote_child
-            stages:
-              - stage:
-                  identifier: cs
-                  type: Custom
-                  spec:
-                    execution:
-                      steps:
-                        - step:
-                            identifier: Wait_1
-                            type: Wait
-                            spec:
-                              duration: 10s
+          inputSetReferences:
+            - IS_1
