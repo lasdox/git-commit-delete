@@ -6,17 +6,11 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: c1
-        identifier: c1
+        name: p1
+        identifier: p1
         description: ""
-        type: Custom
+        type: Pipeline
         spec:
-          execution:
-            steps:
-              - step:
-                  type: Wait
-                  name: Wait_1
-                  identifier: Wait_1
-                  spec:
-                    duration: 10m
-        tags: {}
+          org: default
+          pipeline: remote_child
+          project: Brijesh
