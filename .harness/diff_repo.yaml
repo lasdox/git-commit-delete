@@ -1,0 +1,15 @@
+inputSet:
+  name: diff_repo
+  identifier: diff_repo
+  orgIdentifier: default
+  projectIdentifier: Brijesh
+  pipeline:
+    identifier: remotechild
+    stages:
+      - stage:
+          identifier: cs2
+          type: Custom
+          variables:
+            - name: var1
+              type: String
+              value: 30s
