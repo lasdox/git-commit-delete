@@ -6,6 +6,15 @@ pipeline:
   tags: {}
   stages:
     - stage:
+        name: c3
+        identifier: c3
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: remotechild2insamerepo
+          project: Brijesh
+    - stage:
         name: pip-stage
         identifier: pipstage
         description: ""
@@ -45,12 +54,3 @@ pipeline:
                     outputVariables: []
                   timeout: 10m
         tags: {}
-    - stage:
-        name: c3
-        identifier: c3
-        description: ""
-        type: Pipeline
-        spec:
-          org: default
-          pipeline: remotechild2insamerepo
-          project: Brijesh
