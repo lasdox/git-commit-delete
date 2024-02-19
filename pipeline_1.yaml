@@ -51,8 +51,8 @@ pipeline:
                     source:
                       type: Inline
                       spec:
-                        script: <+input>
+                        script: ech HI
                     environmentVariables: []
                     outputVariables: []
-                  timeout: 10m
+                  timeout: <+input>
         tags: {}
