@@ -1,0 +1,10 @@
+overlayInputSet:
+  name: overlay_2
+  identifier: overlay_2
+  orgIdentifier: default
+  projectIdentifier: Brijesh
+  pipelineIdentifier: remote_1
+  inputSetReferences:
+    - diff_repo_def_branch
+    - IS1
+  tags: {}
