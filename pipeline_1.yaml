@@ -14,6 +14,8 @@ pipeline:
           org: default
           pipeline: remotechild2insamerepo
           project: Brijesh
+          inputSetReferences:
+            - IS_1
     - stage:
         name: pip-stage
         identifier: pipstage
