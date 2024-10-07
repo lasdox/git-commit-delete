@@ -1,0 +1,14 @@
+inputSet:
+  name: is2
+  identifier: is2
+  orgIdentifier: default
+  projectIdentifier: Brijesh
+  pipeline:
+    identifier: branch_name_test_brijesh
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: main
