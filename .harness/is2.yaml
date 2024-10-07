@@ -1,5 +1,6 @@
 inputSet:
   name: is2
+  tags: {}
   identifier: is2
   orgIdentifier: default
   projectIdentifier: Brijesh
@@ -8,7 +9,4 @@ inputSet:
     properties:
       ci:
         codebase:
-          build:
-            type: branch
-            spec:
-              branch: main
+          build: <+input>
