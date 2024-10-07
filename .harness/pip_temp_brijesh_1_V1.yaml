@@ -1,0 +1,37 @@
+template:
+  name: pip_temp_brijesh_1
+  identifier: pip_temp_brijesh_1
+  versionLabel: V1
+  type: Pipeline
+  projectIdentifier: Brijesh
+  orgIdentifier: default
+  tags: {}
+  spec:
+    properties:
+      ci:
+        codebase:
+          connectorRef: githubdemotepo
+          build: <+input>
+    stages:
+      - stage:
+          name: ci
+          identifier: ci
+          description: ""
+          type: CI
+          spec:
+            cloneCodebase: true
+            platform:
+              os: MacOS
+              arch: Amd64
+            runtime:
+              type: Docker
+              spec: {}
+            execution:
+              steps:
+                - step:
+                    type: Run
+                    name: Run_1
+                    identifier: Run_1
+                    spec:
+                      shell: Sh
+                      command: echo Hi
