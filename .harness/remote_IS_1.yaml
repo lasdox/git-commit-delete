@@ -1,0 +1,19 @@
+inputSet:
+  name: remote_IS_1
+  identifier: remote_IS_1
+  orgIdentifier: default
+  projectIdentifier: Brijesh
+  pipeline:
+    identifier: remote__2
+    stages:
+      - stage:
+          identifier: cs
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: Wait_1
+                    type: Wait
+                    spec:
+                      duration: 10s
