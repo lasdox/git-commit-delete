@@ -1,0 +1,22 @@
+pipeline:
+  name: remote _2
+  identifier: remote__2
+  tags: {}
+  projectIdentifier: Brijesh
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: cs
+        identifier: cs
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: Wait
+                  name: Wait_1
+                  identifier: Wait_1
+                  spec:
+                    duration: <+input>
+        tags: {}
