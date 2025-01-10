@@ -1,6 +1,3 @@
 name: <+pipeline.name>-<+pipeline.sequenceId>
 replica: 2
-#replica: <+2 ne <+pipeline.variables.replica> ? <+pipeline.variables.replica> : 1>
-#label: <+"local" ne <+pipeline.variables.label> ? "notequal" : "equal">
-#label: "<+ <+pipeline.variables>.contains("label") ? <+pipeline.variables.label> :"empty">"
 label: prod-test
