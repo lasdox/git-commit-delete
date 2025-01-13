@@ -8,6 +8,6 @@ environment:
   variables:
     - name: var1
       type: String
-      value: <+input>
+      value: <+input>.allowedValues("val1")
       description: ""
       required: false
