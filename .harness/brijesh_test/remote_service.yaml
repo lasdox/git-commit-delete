@@ -1,0 +1,5 @@
+service:
+  name: remote_service
+  identifier: remote_service
+  orgIdentifier: default
+  projectIdentifier: Brijesh
