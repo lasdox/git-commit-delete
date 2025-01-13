@@ -1,0 +1,17 @@
+template:
+  name: http_remote_temp
+  identifier: http_remote_temp
+  versionLabel: "1.0"
+  type: Step
+  projectIdentifier: Brijesh
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Http
+    timeout: 10s
+    spec:
+      url: https://google.com
+      method: <+input>.allowedValues(GET,POST)
+      headers: []
+      inputVariables: []
+      outputVariables: []
