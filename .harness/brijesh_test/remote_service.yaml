@@ -3,3 +3,23 @@ service:
   identifier: remote_service
   orgIdentifier: default
   projectIdentifier: Brijesh
+  serviceDefinition:
+    spec:
+      variables:
+        - name: variable1
+          type: String
+          description: ""
+          required: false
+          value: <+input>
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - spec:
+                connectorRef: Docker_Connector
+                imagePath: library/nginx
+                tag: <+input>.allowedValues(latest)
+                digest: ""
+              identifier: primary
+              type: DockerRegistry
+    type: Kubernetes
