@@ -19,4 +19,10 @@ pipeline:
                   identifier: Wait_1
                   spec:
                     duration: <+input>
+              - step:
+                  type: Wait
+                  name: Wait_2
+                  identifier: Wait_2
+                  spec:
+                    duration: 10s
         tags: {}
