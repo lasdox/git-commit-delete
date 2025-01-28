@@ -14,6 +14,16 @@ pipeline:
           execution:
             steps:
               - step:
+                  name: gtrgfhjk
+                  identifier: gtrgfhjk
+                  template:
+                    templateRef: http_remote_temp
+                    versionLabel: "1.0"
+                    templateInputs:
+                      type: Http
+                      spec:
+                        method: <+input>.allowedValues(GET,POST)
+              - step:
                   type: ShellScript
                   name: ShellScript_1
                   identifier: ShellScript_1
@@ -27,25 +37,4 @@ pipeline:
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
-              - step:
-                  type: Http
-                  name: Http_1
-                  identifier: Http_1
-                  spec:
-                    url: https://www.google.com
-                    method: <+input>.allowedValues(GET)
-                    headers: []
-                    inputVariables: []
-                    outputVariables: []
-                  timeout: 10s
-              - step:
-                  name: gtrgfhjk
-                  identifier: gtrgfhjk
-                  template:
-                    templateRef: http_remote_temp
-                    versionLabel: "1.0"
-                    templateInputs:
-                      type: Http
-                      spec:
-                        method: <+input>.allowedValues(GET,POST)
         tags: {}
