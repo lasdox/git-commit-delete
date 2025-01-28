@@ -8,7 +8,7 @@ template:
   tags: {}
   spec:
     type: Http
-    timeout: 10s
+    timeout: 20s
     spec:
       url: https://google.com
       method: <+input>.allowedValues(GET,POST)
