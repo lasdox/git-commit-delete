@@ -39,8 +39,8 @@ pipeline:
                     outputVariables: []
                   timeout: 10s
               - step:
-                  name: uyjh
-                  identifier: uyjh
+                  name: gtrgfhjk
+                  identifier: gtrgfhjk
                   template:
                     templateRef: http_remote_temp
                     versionLabel: "1.0"
