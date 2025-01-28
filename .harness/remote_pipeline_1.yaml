@@ -8,7 +8,7 @@ pipeline:
     - stage:
         name: cs
         identifier: cs
-        description: ""
+        description: desc
         type: Custom
         spec:
           execution:
