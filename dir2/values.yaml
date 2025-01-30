@@ -1,4 +1,4 @@
-name: <+stage.variables.resourceNamePrefix>
+name: test-deployment-brijesh
 replicas: 1
 
 image: <+artifact.image>
