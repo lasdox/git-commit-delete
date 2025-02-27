@@ -1,0 +1,17 @@
+template:
+  name: step group tempalte
+  identifier: step_group_tempalte
+  versionLabel: "1.0"
+  type: StepGroup
+  projectIdentifier: Mock_Incident
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stageType: Deployment
+    steps:
+      - step:
+          name: rolling
+          identifier: rolling
+          template:
+            templateRef: k8srolling
+            versionLabel: "1.0"
