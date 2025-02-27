@@ -1,0 +1,34 @@
+template:
+  name: deploy template 2
+  identifier: deploy_template_2
+  versionLabel: 1..0
+  type: Stage
+  projectIdentifier: Mock_Incident
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Deployment
+    spec:
+      deploymentType: Kubernetes
+      environment:
+        environmentRef: env1
+        deployToAll: false
+        infrastructureDefinitions:
+          - identifier: infra1
+      service:
+        serviceRef: svc1
+      execution:
+        steps:
+          - step:
+              name: shell
+              identifier: shell
+              template:
+                templateRef: shell_script_template
+                versionLabel: "1.0"
+        rollbackSteps: []
+    failureStrategies:
+      - onFailure:
+          errors:
+            - AllErrors
+          action:
+            type: StageRollback
