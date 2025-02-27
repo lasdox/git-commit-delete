@@ -31,3 +31,16 @@ template:
                       outputVariables: []
                     timeout: 10m
           tags: {}
+      - stage:
+          name: ci1
+          identifier: ci1
+          template:
+            templateRef: build_stage
+            versionLabel: "1.0"
+      - stage:
+          name: cd1
+          identifier: cd1
+          tags: {}
+          template:
+            templateRef: deploy_stage
+            versionLabel: "1.0"
