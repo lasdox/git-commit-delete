@@ -1,0 +1,14 @@
+template:
+  name: k8s-rolling
+  identifier: k8srolling
+  versionLabel: "1.0"
+  type: Step
+  projectIdentifier: Mock_Incident
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: K8sRollingDeploy
+    timeout: 10m
+    spec:
+      skipDryRun: false
+      pruningEnabled: false
