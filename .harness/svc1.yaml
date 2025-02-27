@@ -1,0 +1,9 @@
+service:
+  name: svc1
+  identifier: svc1
+  serviceDefinition:
+    type: Kubernetes
+    spec: {}
+  gitOpsEnabled: false
+  orgIdentifier: default
+  projectIdentifier: Mock_Incident
