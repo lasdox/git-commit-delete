@@ -1,0 +1,26 @@
+template:
+  name: build stage
+  identifier: build_stage
+  versionLabel: "1.0"
+  type: Stage
+  projectIdentifier: Mock_Incident
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: CI
+    spec:
+      cloneCodebase: false
+      platform:
+        os: Linux
+        arch: Amd64
+      runtime:
+        type: Docker
+        spec: {}
+      execution:
+        steps:
+          - step:
+              name: run
+              identifier: run
+              template:
+                templateRef: run_step
+                versionLabel: "1.0"
