@@ -9,29 +9,6 @@ template:
   spec:
     stages:
       - stage:
-          name: cs
-          identifier: cs
-          description: ""
-          type: Custom
-          spec:
-            execution:
-              steps:
-                - step:
-                    type: ShellScript
-                    name: ShellScript_1
-                    identifier: ShellScript_1
-                    spec:
-                      shell: Bash
-                      executionTarget: {}
-                      source:
-                        type: Inline
-                        spec:
-                          script: d
-                      environmentVariables: []
-                      outputVariables: []
-                    timeout: 10m
-          tags: {}
-      - stage:
           name: ci1
           identifier: ci1
           template:
