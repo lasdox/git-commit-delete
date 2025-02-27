@@ -1,0 +1,43 @@
+template:
+  name: deploy stage
+  identifier: deploy_stage
+  versionLabel: "1.0"
+  type: Stage
+  projectIdentifier: Mock_Incident
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Deployment
+    spec:
+      deploymentType: Kubernetes
+      environment:
+        environmentRef: env1
+        gitBranch: main
+        deployToAll: false
+        infrastructureDefinitions:
+          - identifier: infra1
+      service:
+        serviceRef: svc1
+        gitBranch: main
+      execution:
+        steps:
+          - step:
+              name: k8srolling
+              identifier: k8srolling
+              template:
+                templateRef: k8srolling
+                versionLabel: "1.0"
+        rollbackSteps:
+          - step:
+              name: Rollback Rollout Deployment
+              identifier: rollbackRolloutDeployment
+              type: K8sRollingRollback
+              timeout: 10m
+              spec:
+                pruningEnabled: false
+    failureStrategies:
+      - onFailure:
+          errors:
+            - AllErrors
+          action:
+            type: StageRollback
