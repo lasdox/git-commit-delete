@@ -21,3 +21,16 @@ template:
           template:
             templateRef: deploy_stage
             versionLabel: "1.0"
+      - stage:
+          name: ci2
+          identifier: ci2
+          template:
+            templateRef: Build_template_2
+            versionLabel: "1.0"
+      - stage:
+          name: cd2
+          identifier: cd2
+          tags: {}
+          template:
+            templateRef: deploy_template_2
+            versionLabel: 1..0
