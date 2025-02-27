@@ -1,0 +1,17 @@
+template:
+  name: step-group-template-ci
+  identifier: stepgrouptemplateci
+  versionLabel: "1.0"
+  type: StepGroup
+  projectIdentifier: Mock_Incident
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stageType: CI
+    steps:
+      - step:
+          name: run
+          identifier: run
+          template:
+            templateRef: run_step
+            versionLabel: "1.0"
