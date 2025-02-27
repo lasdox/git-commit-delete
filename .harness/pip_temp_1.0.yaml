@@ -1,0 +1,33 @@
+template:
+  name: pip temp
+  identifier: pip_temp
+  versionLabel: "1.0"
+  type: Pipeline
+  projectIdentifier: Mock_Incident
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: cs
+          identifier: cs
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    type: ShellScript
+                    name: ShellScript_1
+                    identifier: ShellScript_1
+                    spec:
+                      shell: Bash
+                      executionTarget: {}
+                      source:
+                        type: Inline
+                        spec:
+                          script: d
+                      environmentVariables: []
+                      outputVariables: []
+                    timeout: 10m
+          tags: {}
