@@ -34,3 +34,5 @@ template:
           template:
             templateRef: deploy_template_2
             versionLabel: 1..0
+    delegateSelectors:
+      - invalid
