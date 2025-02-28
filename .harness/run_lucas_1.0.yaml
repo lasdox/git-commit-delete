@@ -1,0 +1,13 @@
+template:
+  name: run_lucas
+  identifier: run_lucas
+  versionLabel: "1.0"
+  type: Step
+  projectIdentifier: Mock_Incident
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Run
+    spec:
+      shell: Sh
+      command: echo hI
