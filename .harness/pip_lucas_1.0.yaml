@@ -1,0 +1,27 @@
+template:
+  name: pip_lucas
+  identifier: pip_lucas
+  versionLabel: "1.0"
+  type: Pipeline
+  projectIdentifier: Mock_Incident
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: s
+          identifier: s
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    type: Wait
+                    name: Wait_1
+                    identifier: Wait_1
+                    spec:
+                      duration: 10m
+          tags: {}
+    delegateSelectors:
+      - invalid
