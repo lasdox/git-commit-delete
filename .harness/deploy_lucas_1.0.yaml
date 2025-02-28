@@ -1,0 +1,34 @@
+template:
+  name: deploy_lucas
+  identifier: deploy_lucas
+  versionLabel: "1.0"
+  type: Stage
+  projectIdentifier: Mock_Incident
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Deployment
+    spec:
+      deploymentType: Kubernetes
+      environment:
+        environmentRef: env
+        deployToAll: false
+        infrastructureDefinitions:
+          - identifier: infra
+      service:
+        serviceRef: svc
+      execution:
+        steps:
+          - step:
+              name: das
+              identifier: das
+              template:
+                templateRef: k8s_lucas
+                versionLabel: "1.0"
+        rollbackSteps: []
+    failureStrategies:
+      - onFailure:
+          errors:
+            - AllErrors
+          action:
+            type: StageRollback
