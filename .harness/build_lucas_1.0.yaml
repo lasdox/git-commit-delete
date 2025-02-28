@@ -19,8 +19,8 @@ template:
       execution:
         steps:
           - step:
-              name: run
-              identifier: run
+              name: runm1
+              identifier: runm1
               template:
-                templateRef: run2
+                templateRef: run_lucas
                 versionLabel: "1.0"
