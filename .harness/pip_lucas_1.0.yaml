@@ -23,5 +23,24 @@ template:
                     spec:
                       duration: 10m
           tags: {}
+      - stage:
+          name: ds
+          identifier: ds
+          tags: {}
+          template:
+            templateRef: deploy_lucas
+            versionLabel: "1.0"
+      - stage:
+          name: fdsa
+          identifier: fdsa
+          template:
+            templateRef: build_lucas_2
+            versionLabel: "1.0"
+      - stage:
+          name: fddfa
+          identifier: fddfa
+          template:
+            templateRef: build_lucas
+            versionLabel: "1.0"
     delegateSelectors:
       - invalid
